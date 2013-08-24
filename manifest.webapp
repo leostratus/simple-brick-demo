@@ -1,0 +1,7 @@
+{
+	"version" : "0.0.1",
+	"name" : "Simple Brick (x-tags/webcomponents based app widgets) Demo",
+	"launch_path" : "/index.html",
+	"description" : "A demo app using Brick",
+	"installs_allowed_from" : ["*"]
+}
