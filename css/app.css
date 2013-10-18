@@ -1,27 +1,31 @@
 /* Custom CSS for our widgets */
 
+@font-face
+{
+	font-family: OpenSans;
+	src: url('OpenSans-SemiBold.ttf')
+} 
 html, body{
 	margin: 0;
 	padding: 0;
+	font-family: OpenSans;
+
 }
 
-#bar header{
-	margin-top: 1em;
+h1 {
+	font-size: 100%;
 }
 
-.widget {
-	margin: 0.5em 0;
+x-appbar {
+	padding: .1em 0;
 }
 
-#flipbox .side{
-	padding: 0.5em;
-	min-height: 10em;
+x-deck {
+	min-height: 32em;
 }
 
-#flipbox .front{
+x-deck > x-card {
 	background: #eee;
-}
-
-#flipbox .back {
-	background: #eef;
+	color: #000;
+	padding: 1em;
 }

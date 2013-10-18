@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/brick-1.0beta5.css"/>
+	<link rel="stylesheet" type="text/css" href="css/brick.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <title>Firefox OS App - Brick Demo</title>
 </head>
@@ -11,25 +11,30 @@
 <body>
 	<x-appbar id="bar">
     	<header>Simple Brick App</header>
-    	<button id="flip">Flip Me</button>
+        <button id="view-prev">Prev</button>
+    	<button id="view-next">Next</button>
 	</x-appbar>
+    <x-deck id="deck">
+    <x-card>
+        <h1>View 1</h1>
+        <p>This is View 1</p>
+        <p>It is just a vanilla view.</p>
+    </x-card>
 
-	<x-flipbox id="flipbox" class="widget">
-    	<div class="front side">
-    		<p>I'm the front face, and I have some toggle examples.</p>
-			<form id="toggle-example" class="widget">
-			    <x-toggle name="foo" label="foo #1" value="1"></x-toggle>
-			    <x-toggle name="foo" label="foo #2" value="2"></x-toggle>
-			    <x-toggle name="bar" label="bar #1"></x-toggle>
-			</form>
-    	</div>
-    	<div class="back side">
-    		<p>And I'm the back face, and I have a datepicker!</p>
-    		<x-datepicker class="widget"></x-datepicker>
-    	</div>
-	</x-flipbox>
+    <x-card>
+        <h1>Pick a Date</h1>
+        <p>&lt;x-datepicker&gt;'s are a polyfill for &lt;input type="date"&gt;</p>
+        <x-datepicker></x-datepicker>
+    </x-card>
 
-	<script type="text/javascript" src="js/brick-1.0beta5.js"></script>
+    <x-card>
+        <h1>A Random Cat, Because Why Not</h1>
+        <random-cat></random-cat>
+    </x-card> 
+    </x-deck>
+
+	<script type="text/javascript" src="js/brick.min.js"></script>
+    <script type="text/javascript" src="js/random-cat.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
